@@ -214,10 +214,10 @@ __meta__ = {
 }
 
 [node name="right_hand" type="Control" parent="Control"]
-margin_left = 242.122
-margin_top = -15.0818
-margin_right = 487.122
-margin_bottom = 489.918
+margin_left = 250.0
+margin_top = -23.0
+margin_right = 487.0
+margin_bottom = 490.0
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
