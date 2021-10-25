@@ -1,11 +1,67 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scenes/dialogs/dialog.gd" type="Script" id=1]
+[ext_resource path="res://scenes/dialogs/inventory.png" type="Texture" id=2]
+[ext_resource path="res://fonts/Kenney Pixel.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="DynamicFont" id=2]
+size = 32
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 48
+font_data = ExtResource( 3 )
 
 [node name="TextureRect" type="TextureRect"]
-margin_right = 40.0
-margin_bottom = 40.0
+margin_right = 960.0
+margin_bottom = 480.0
+rect_clip_content = true
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 2
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 480.0
+margin_bottom = 480.0
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+scroll_following = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemList" type="ItemList" parent="."]
+margin_left = 515.0
+margin_top = 128.0
+margin_right = 960.0
+margin_bottom = 480.0
+custom_styles/bg = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.984314, 0.972549, 0.972549, 1 )
+custom_constants/vseparation = 32
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+margin_left = 515.0
+margin_right = 960.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 128, 128 )
+custom_fonts/normal_font = SubResource( 4 )
+
+[connection signal="item_selected" from="ItemList" to="." method="_on_ItemList_item_selected"]

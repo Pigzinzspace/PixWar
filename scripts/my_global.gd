@@ -32,9 +32,10 @@ var monster_types = {
 "crab":{"tile_id":12,"hp":16,"death_dance":{0:dances[1],1:dances[2],2:dances[0],3:dances[3],4:dances[0]}},
 "beholder":{"tile_id":13,"hp":16,"death_dance":{0:dances[2]}}
 }
-var items = {"short_sword":{"tile_id":62,"condition":32},
-"shield":{"tile_id":93,"condition":32}}
+var items = {"short_sword":{"name":"short sword","tile_id":62},
+"shield":{"name":"shield","tile_id":93}}
 
+var NPCs = {"test_NPC":"Vasya"}
 var printed = { "hit_points":16,
 "stamina":16,
 "left_hand":items.shield,
