@@ -10,6 +10,7 @@ var door_types = {"exit_door": {"tile_id":30} ,
 "closed_door":{"tile_id":32},
 "door":{"tile_id":33}
 }
+enum dance {PANIC=0,BASIC=1,MEDIUM=2,STRONG=3}
 var machine_types = {"mine":{"tile_id":136},
 "science":{"tile_id":49},
 "sintez":{"tile_id":29},
@@ -22,10 +23,10 @@ var menu_types = {"keys":{"tile_id":80},
 }
 #это надо передеоать все картинки по номерам а эти по смещению, че  за бред
 var dances = {
-	0:{"damage":0,"cell_id":Vector2(1,1)},
-	1:{"damage":1,"cell_id":Vector2(2,10)},
-	2:{"damage":2,"cell_id":Vector2(1,10)},
-	3:{"damage":3,"cell_id":Vector2(0,10)}
+	dance.PANIC:{"damage":0,"cell_id":Vector2(1,1)},
+	dance.BASIC:{"damage":1,"cell_id":Vector2(2,10)},
+	dance.MEDIUM:{"damage":2,"cell_id":Vector2(1,10)},
+	dance.STRONG:{"damage":3,"cell_id":Vector2(0,10)}
 	} 
 var monster_types = {
 "rat":{"tile_id":20,"hp":16,"death_dance":{0:dances[1],1:dances[2],2:dances[3],3:dances[0]}},
