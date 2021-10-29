@@ -20,6 +20,7 @@ var machine_types = {"mine":{"tile_id":136},
 var menu_types = {"keys":{"tile_id":80},
 "food":{"tile_id":122}
 }
+#это надо передеоать все картинки по номерам а эти по смещению, че  за бред
 var dances = {
 	0:{"damage":0,"cell_id":Vector2(1,1)},
 	1:{"damage":1,"cell_id":Vector2(2,10)},

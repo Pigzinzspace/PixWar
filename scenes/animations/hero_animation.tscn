@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=68 format=2]
 
 [ext_resource path="res://sprites/colored_tilemap_packed1.png" type="Texture" id=1]
 
@@ -8,10 +8,9 @@ region = Rect2( 48, 32, 8, 8 )
 
 [sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 1 )
-region = Rect2( 72, 48, 8, 8 )
+region = Rect2( 80, 32, 8, 8 )
 
 [sub_resource type="Animation" id=3]
-resource_name = "boby noise"
 length = 4.0
 loop = true
 tracks/0/type = "value"
@@ -28,7 +27,110 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=4]
-resource_name = "finish great slash"
+resource_name = "ch_weapon_finish"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("l_hand:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -150, 0 ), Vector2( -150, -200 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("l_hand:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("r_hand:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 150, 0 ), Vector2( 150, -200 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("r_hand:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "ch_weapon_start"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("r_hand:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 150, -200 ), Vector2( 150, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("r_hand:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("l_hand:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -150, -200 ), Vector2( -150, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("l_hand:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=6]
 length = 1.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("r_hand:position")
@@ -55,8 +157,8 @@ tracks/1/keys = {
 "values": [ 80.0, -43.561, 0.0 ]
 }
 
-[sub_resource type="Animation" id=5]
-resource_name = "idle"
+[sub_resource type="Animation" id=7]
+loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("r_hand:position")
 tracks/0/interp = 1
@@ -82,7 +184,144 @@ tracks/1/keys = {
 "values": [ 0.0, 0.0 ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=8]
+resource_name = "l_bot_hit"
+tracks/0/type = "value"
+tracks/0/path = NodePath("l_hand:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 0.366021, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -150, -200 ), Vector2( -64.5703, -127.919 ), Vector2( -20.5206, -346.832 ), Vector2( -150, -200 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("l_hand:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -30.1347, -46.0702, 0.0 ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "l_idle"
+length = 0.7
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("l_hand:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -150, -200 ), Vector2( -150, -200 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("l_hand:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "l_left_slash"
+tracks/0/type = "value"
+tracks/0/path = NodePath("l_hand:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.5, 0.6, 1 ),
+"transitions": PoolRealArray( 1, 0.287175, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -150, -200 ), Vector2( -340.051, -209.906 ), Vector2( 96.7369, -335.909 ), Vector2( 143.528, -273.292 ), Vector2( -150, -200 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("l_hand:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3, 0.5, 0.6, 1 ),
+"transitions": PoolRealArray( 1, 0.176777, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -117.319, 13.2948, 24.1401, 0.0 ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "l_right_slash"
+tracks/0/type = "value"
+tracks/0/path = NodePath("l_hand:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 0.329877, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -150, -200 ), Vector2( 235.737, -129.006 ), Vector2( -192.772, -384.469 ), Vector2( -150, -200 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("l_hand:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 63.2572, -26.4386, 0.0 ]
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "l_side_hit"
+tracks/0/type = "value"
+tracks/0/path = NodePath("l_hand:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 0.112656, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -150, -200 ), Vector2( -214.627, -425.666 ), Vector2( -62.4114, -426.193 ), Vector2( -150, -200 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("l_hand:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 42.4476, 48.2747, 0.0 ]
+}
+
+[sub_resource type="Animation" id=13]
 tracks/0/type = "value"
 tracks/0/path = NodePath("r_hand:position")
 tracks/0/interp = 1
@@ -108,7 +347,7 @@ tracks/1/keys = {
 "values": [ 0.0, 16.8916, 41.2638, 0.0 ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=14]
 tracks/0/type = "value"
 tracks/0/path = NodePath("r_hand:rotation_degrees")
 tracks/0/interp = 1
@@ -134,7 +373,7 @@ tracks/1/keys = {
 "values": [ Vector2( 150, -200 ), Vector2( -173.8, -157.163 ), Vector2( 9.52329, -364.308 ), Vector2( 239.454, -514.98 ), Vector2( 150, -200 ) ]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=15]
 tracks/0/type = "value"
 tracks/0/path = NodePath("r_hand:rotation_degrees")
 tracks/0/interp = 1
@@ -160,7 +399,7 @@ tracks/1/keys = {
 "values": [ Vector2( 150, -200 ), Vector2( 297.078, -347.078 ), Vector2( -25.7544, -339.628 ), Vector2( -130.014, -171.716 ), Vector2( 150, -200 ) ]
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=16]
 tracks/0/type = "value"
 tracks/0/path = NodePath("r_hand:position")
 tracks/0/interp = 1
@@ -186,7 +425,7 @@ tracks/1/keys = {
 "values": [ 0.0, -5.96729, -49.4559, 0.0 ]
 }
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=17]
 length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("l_hand:position")
@@ -213,8 +452,7 @@ tracks/1/keys = {
 "values": [ 0.0, 8.11425 ]
 }
 
-[sub_resource type="Animation" id=11]
-resource_name = "start great slash"
+[sub_resource type="Animation" id=18]
 length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("r_hand:position")
@@ -241,97 +479,207 @@ tracks/1/keys = {
 "values": [ 0.0, 80.0 ]
 }
 
-[sub_resource type="AnimationNodeAnimation" id=13]
-animation = "r_bot_hit"
-
-[sub_resource type="AnimationNodeAnimation" id=14]
-animation = "r_side_hit"
-
-[sub_resource type="AnimationNodeAnimation" id=15]
-animation = "r_left_slash"
-
-[sub_resource type="AnimationNodeAnimation" id=16]
-animation = "r_right_slash"
+[sub_resource type="AnimationNodeBlend2" id=66]
 
 [sub_resource type="AnimationNodeAnimation" id=19]
 animation = "boby noise"
 
-[sub_resource type="AnimationNodeAnimation" id=26]
-animation = "shield_up"
+[sub_resource type="AnimationNodeTransition" id=49]
+input_count = 3
+input_0/name = "2_hand"
+input_0/auto_advance = false
+input_1/name = "great_slash"
+input_1/auto_advance = false
+input_2/name = "change_weapon"
+input_2/auto_advance = false
 
-[sub_resource type="AnimationNodeAnimation" id=17]
-animation = "idle"
+[sub_resource type="AnimationNodeAnimation" id=20]
+animation = "ch_weapon_finish"
 
-[sub_resource type="AnimationNodeBlend2" id=27]
+[sub_resource type="AnimationNodeAnimation" id=21]
+animation = "ch_weapon_start"
 
-[sub_resource type="AnimationNodeBlend2" id=20]
+[sub_resource type="AnimationNodeStateMachineTransition" id=22]
+switch_mode = 2
 
-[sub_resource type="AnimationNodeAnimation" id=28]
+[sub_resource type="AnimationNodeStateMachine" id=23]
+states/ch_weapon_finish/node = SubResource( 20 )
+states/ch_weapon_finish/position = Vector2( 657, 66 )
+states/ch_weapon_start/node = SubResource( 21 )
+states/ch_weapon_start/position = Vector2( 192, 66 )
+transitions = [ "ch_weapon_start", "ch_weapon_finish", SubResource( 22 ) ]
+start_node = "ch_weapon_start"
+end_node = "ch_weapon_finish"
+
+[sub_resource type="AnimationNodeBlend2" id=24]
+
+[sub_resource type="AnimationNodeAnimation" id=45]
 animation = "finish great slash"
 
-[sub_resource type="AnimationNodeAnimation" id=29]
+[sub_resource type="AnimationNodeAnimation" id=46]
 animation = "start great slash"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=30]
-switch_mode = 1
-auto_advance = true
+[sub_resource type="AnimationNodeStateMachineTransition" id=47]
+switch_mode = 2
 
-[sub_resource type="AnimationNodeStateMachine" id=24]
-"states/finish great slash/node" = SubResource( 28 )
-"states/finish great slash/position" = Vector2( 433, 78 )
-"states/start great slash/node" = SubResource( 29 )
-"states/start great slash/position" = Vector2( 165, 78 )
-transitions = [ "start great slash", "finish great slash", SubResource( 30 ) ]
+[sub_resource type="AnimationNodeStateMachine" id=48]
+"states/finish great slash/node" = SubResource( 45 )
+"states/finish great slash/position" = Vector2( 382, 73 )
+"states/start great slash/node" = SubResource( 46 )
+"states/start great slash/position" = Vector2( 160, 71 )
+transitions = [ "start great slash", "finish great slash", SubResource( 47 ) ]
 start_node = "start great slash"
 end_node = "finish great slash"
 
-[sub_resource type="AnimationNodeTransition" id=18]
-input_count = 6
-input_0/name = "state 0"
-input_0/auto_advance = true
-input_1/name = "state 1"
-input_1/auto_advance = true
-input_2/name = "state 2"
-input_2/auto_advance = true
-input_3/name = "state 3"
-input_3/auto_advance = true
-input_4/name = "state 4"
-input_4/auto_advance = true
-input_5/name = "state 5"
-input_5/auto_advance = true
+[sub_resource type="AnimationNodeAnimation" id=25]
+animation = "l_bot_hit"
 
-[sub_resource type="AnimationNodeBlendTree" id=12]
-graph_offset = Vector2( -293.607, -75.8298 )
-nodes/Animation/node = SubResource( 17 )
-nodes/Animation/position = Vector2( -360, -20 )
-"nodes/Animation 2/node" = SubResource( 13 )
-"nodes/Animation 2/position" = Vector2( -380, 100 )
-"nodes/Animation 3/node" = SubResource( 14 )
-"nodes/Animation 3/position" = Vector2( -380, 220 )
-"nodes/Animation 4/node" = SubResource( 15 )
-"nodes/Animation 4/position" = Vector2( -160, 100 )
-"nodes/Animation 5/node" = SubResource( 16 )
-"nodes/Animation 5/position" = Vector2( -200, 220 )
+[sub_resource type="AnimationNodeAnimation" id=26]
+animation = "l_idle"
+
+[sub_resource type="AnimationNodeAnimation" id=27]
+animation = "l_left_slash"
+
+[sub_resource type="AnimationNodeAnimation" id=28]
+animation = "l_right_slash"
+
+[sub_resource type="AnimationNodeAnimation" id=29]
+animation = "l_side_hit"
+
+[sub_resource type="AnimationNodeAnimation" id=30]
+animation = "shield_up"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=31]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=32]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=33]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=34]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=35]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=36]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=37]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=38]
+switch_mode = 1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=39]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=40]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachine" id=41]
+states/l_bot_hit/node = SubResource( 25 )
+states/l_bot_hit/position = Vector2( -43, 342 )
+states/l_idle/node = SubResource( 26 )
+states/l_idle/position = Vector2( 101, 167 )
+states/l_left_slash/node = SubResource( 27 )
+states/l_left_slash/position = Vector2( 256, 52 )
+states/l_right_slash/node = SubResource( 28 )
+states/l_right_slash/position = Vector2( -6, 52 )
+states/l_side_hit/node = SubResource( 29 )
+states/l_side_hit/position = Vector2( 145, 342 )
+states/shield_up/node = SubResource( 30 )
+states/shield_up/position = Vector2( 369, 342 )
+transitions = [ "l_idle", "l_right_slash", SubResource( 31 ), "l_idle", "l_left_slash", SubResource( 32 ), "l_idle", "shield_up", SubResource( 33 ), "l_idle", "l_side_hit", SubResource( 34 ), "l_idle", "l_bot_hit", SubResource( 35 ), "l_right_slash", "l_idle", SubResource( 36 ), "l_left_slash", "l_idle", SubResource( 37 ), "shield_up", "l_idle", SubResource( 38 ), "l_side_hit", "l_idle", SubResource( 39 ), "l_bot_hit", "l_idle", SubResource( 40 ) ]
+start_node = "l_idle"
+graph_offset = Vector2( -154.945, 0 )
+
+[sub_resource type="AnimationNodeAnimation" id=53]
+animation = "idle"
+
+[sub_resource type="AnimationNodeAnimation" id=54]
+animation = "r_bot_hit"
+
+[sub_resource type="AnimationNodeAnimation" id=55]
+animation = "r_left_slash"
+
+[sub_resource type="AnimationNodeAnimation" id=56]
+animation = "r_right_slash"
+
+[sub_resource type="AnimationNodeAnimation" id=57]
+animation = "r_side_hit"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=58]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=59]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=60]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=61]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=62]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=63]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=64]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=65]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachine" id=51]
+states/idle/node = SubResource( 53 )
+states/idle/position = Vector2( 138, 141 )
+states/r_bot_hit/node = SubResource( 54 )
+states/r_bot_hit/position = Vector2( 373, 299 )
+states/r_left_slash/node = SubResource( 55 )
+states/r_left_slash/position = Vector2( 408, 49 )
+states/r_right_slash/node = SubResource( 56 )
+states/r_right_slash/position = Vector2( 673, 109 )
+states/r_side_hit/node = SubResource( 57 )
+states/r_side_hit/position = Vector2( 639, 232 )
+transitions = [ "idle", "r_right_slash", SubResource( 58 ), "idle", "r_left_slash", SubResource( 59 ), "idle", "r_bot_hit", SubResource( 60 ), "idle", "r_side_hit", SubResource( 61 ), "r_left_slash", "idle", SubResource( 62 ), "r_right_slash", "idle", SubResource( 63 ), "r_side_hit", "idle", SubResource( 64 ), "r_bot_hit", "idle", SubResource( 65 ) ]
+start_node = "idle"
+
+[sub_resource type="AnimationNodeBlendTree" id=42]
+graph_offset = Vector2( -353.95, -57 )
+nodes/2_hand/node = SubResource( 66 )
+nodes/2_hand/position = Vector2( -80, 80 )
 "nodes/Animation 6/node" = SubResource( 19 )
-"nodes/Animation 6/position" = Vector2( 440, 240 )
-"nodes/Animation 7/node" = SubResource( 26 )
-"nodes/Animation 7/position" = Vector2( 220, 240 )
-nodes/Blend2/node = SubResource( 20 )
-nodes/Blend2/position = Vector2( 620, 80 )
-"nodes/Blend2 2/node" = SubResource( 27 )
-"nodes/Blend2 2/position" = Vector2( 420, -40 )
-nodes/StateMachine/node = SubResource( 24 )
-nodes/StateMachine/position = Vector2( 0, 220 )
-nodes/Transition/node = SubResource( 18 )
-nodes/Transition/position = Vector2( 200, -60 )
-nodes/output/position = Vector2( 780, -20 )
-node_connections = [ "output", 0, "Blend2", "Blend2", 0, "Blend2 2", "Blend2", 1, "Animation 6", "Transition", 0, "Animation", "Transition", 1, "Animation 2", "Transition", 2, "Animation 3", "Transition", 3, "Animation 4", "Transition", 4, "Animation 5", "Transition", 5, "StateMachine", "Blend2 2", 0, "Transition", "Blend2 2", 1, "Animation 7" ]
+"nodes/Animation 6/position" = Vector2( 200, -40 )
+nodes/Transition/node = SubResource( 49 )
+nodes/Transition/position = Vector2( 320, 140 )
+nodes/change_weapon/node = SubResource( 23 )
+nodes/change_weapon/position = Vector2( 100, 200 )
+nodes/full_move/node = SubResource( 24 )
+nodes/full_move/position = Vector2( 400, -40 )
+nodes/great_slash/node = SubResource( 48 )
+nodes/great_slash/position = Vector2( 100, 80 )
+nodes/l_hand/node = SubResource( 41 )
+nodes/l_hand/position = Vector2( -280, 40 )
+nodes/output/position = Vector2( 600, -20 )
+nodes/r_hand/node = SubResource( 51 )
+nodes/r_hand/position = Vector2( -280, 200 )
+node_connections = [ "output", 0, "full_move", "full_move", 0, "Animation 6", "full_move", 1, "Transition", "2_hand", 0, "l_hand", "2_hand", 1, "r_hand", "Transition", 0, "2_hand", "Transition", 1, "great_slash", "Transition", 2, "change_weapon" ]
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=25]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=43]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=50]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=44]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=52]
 
 [node name="avatar_animation" type="Node2D"]
 __meta__ = {
-"_edit_vertical_guides_": [ 149.736 ]
+"_edit_vertical_guides_": [ 149.736, -149.738 ]
 }
 
 [node name="target" type="Position2D" parent="."]
@@ -339,61 +687,54 @@ position = Vector2( -45.7046, -231.58 )
 
 [node name="body" type="Position2D" parent="."]
 position = Vector2( 0, 200 )
-rotation = 0.019252
+rotation = -0.0223207
 
 [node name="r_hand" type="Position2D" parent="body"]
-position = Vector2( 93.5926, -323.638 )
-rotation = -0.452963
+position = Vector2( 150, -200 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="TextureRect" type="TextureRect" parent="body/r_hand"]
-margin_left = -80.0
-margin_top = -80.0
-margin_right = 80.0
-margin_bottom = 80.0
+[node name="Sprite" type="Sprite" parent="body/r_hand"]
+scale = Vector2( 20, 20 )
 texture = SubResource( 1 )
-stretch_mode = 1
 flip_h = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="l_hand" type="Position2D" parent="body"]
-position = Vector2( -43.934, -229.698 )
-rotation = 0.14162
+position = Vector2( -150, -200 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="TextureRect" type="TextureRect" parent="body/l_hand"]
-margin_left = -80.0
-margin_top = -80.0
-margin_right = 80.0
-margin_bottom = 80.0
+[node name="Sprite" type="Sprite" parent="body/l_hand"]
+scale = Vector2( 20, 20 )
 texture = SubResource( 2 )
-stretch_mode = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="body"]
 "anims/boby noise" = SubResource( 3 )
-"anims/finish great slash" = SubResource( 4 )
-anims/idle = SubResource( 5 )
-anims/r_bot_hit = SubResource( 6 )
-anims/r_left_slash = SubResource( 7 )
-anims/r_right_slash = SubResource( 8 )
-anims/r_side_hit = SubResource( 9 )
-anims/shield_up = SubResource( 10 )
-"anims/start great slash" = SubResource( 11 )
+anims/ch_weapon_finish = SubResource( 4 )
+anims/ch_weapon_start = SubResource( 5 )
+"anims/finish great slash" = SubResource( 6 )
+anims/idle = SubResource( 7 )
+anims/l_bot_hit = SubResource( 8 )
+anims/l_idle = SubResource( 9 )
+anims/l_left_slash = SubResource( 10 )
+anims/l_right_slash = SubResource( 11 )
+anims/l_side_hit = SubResource( 12 )
+anims/r_bot_hit = SubResource( 13 )
+anims/r_left_slash = SubResource( 14 )
+anims/r_right_slash = SubResource( 15 )
+anims/r_side_hit = SubResource( 16 )
+anims/shield_up = SubResource( 17 )
+"anims/start great slash" = SubResource( 18 )
 
 [node name="AnimationTree" type="AnimationTree" parent="body"]
-tree_root = SubResource( 12 )
+tree_root = SubResource( 42 )
 anim_player = NodePath("../AnimationPlayer")
-active = true
-parameters/Blend2/blend_amount = 0.51
-"parameters/Blend2 2/blend_amount" = 0.51
-parameters/StateMachine/playback = SubResource( 25 )
-parameters/Transition/current = 2
+parameters/2_hand/blend_amount = 0.5
+parameters/Transition/current = 0
+parameters/change_weapon/playback = SubResource( 43 )
+parameters/full_move/blend_amount = 0.41
+parameters/great_slash/playback = SubResource( 50 )
+parameters/l_hand/playback = SubResource( 44 )
+parameters/r_hand/playback = SubResource( 52 )
