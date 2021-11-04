@@ -12,6 +12,7 @@ var old_rect_position = Vector2(0,0)
 var old_rect_scale = Vector2(1,1)
 signal opponent_attack(damage)
 
+
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"

@@ -46,6 +46,8 @@ var printed = { "hit_points":16,
 "food": 300
 }
 
+enum mob_tree_action { IDLE,PANIC,BASIC_ATTACK,MEDIUM_ATTACK,STRONG_ATTACK,DEATH}
+
 #словарь индексов силы урона которые называются танец от 0 и до фига
 
  
