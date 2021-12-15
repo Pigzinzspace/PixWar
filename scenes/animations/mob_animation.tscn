@@ -341,8 +341,8 @@ node_connections = [ "output", 0, "Transition", "Transition", 0, "actions", "Tra
 script = ExtResource( 2 )
 
 [node name="Position2D" type="Position2D" parent="."]
-position = Vector2( 0, -17.9261 )
-rotation = 0.0210729
+position = Vector2( 0, -1.67713 )
+rotation = 0.0494327
 
 [node name="mob" type="Position2D" parent="Position2D"]
 

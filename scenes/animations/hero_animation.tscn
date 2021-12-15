@@ -711,7 +711,7 @@ nodes/r_hand_basic/node = SubResource( 59 )
 nodes/r_hand_basic/position = Vector2( -440, 180 )
 nodes/r_hand_great/node = SubResource( 67 )
 nodes/r_hand_great/position = Vector2( -440, 320 )
-node_connections = [ "output", 0, "full_move", "r_hand", 0, "r_hand_basic", "r_hand", 1, "r_hand_great", "full_move", 0, "Animation 6", "full_move", 1, "actions", "actions", 0, "all_attacks", "actions", 1, "change_weapon", "all_attacks", 0, "l_hand", "all_attacks", 1, "r_hand" ]
+node_connections = [ "output", 0, "full_move", "actions", 0, "all_attacks", "actions", 1, "change_weapon", "r_hand", 0, "r_hand_basic", "r_hand", 1, "r_hand_great", "all_attacks", 0, "l_hand", "all_attacks", 1, "r_hand", "full_move", 0, "Animation 6", "full_move", 1, "actions" ]
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=69]
 
@@ -732,7 +732,7 @@ position = Vector2( -45.7046, -231.58 )
 
 [node name="body" type="Position2D" parent="."]
 position = Vector2( 0, 200 )
-rotation = -0.0233574
+rotation = -0.0440336
 
 [node name="r_hand" type="Position2D" parent="body"]
 position = Vector2( 150, -200 )
